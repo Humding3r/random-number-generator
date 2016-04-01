@@ -3,7 +3,9 @@ $(document).ready(function() {
     var randomNum = Math.floor((Math.random() * maximum) + 1);
 
     $("#submit").click(function() {
-        $("#result").clear();
+        maximum = $("input[name=max]").val();
+        randomNum = Math.floor((Math.random() * maximum) + 1);
+        $("#result").empty();
         $("<p>The number generated was " + randomNum + ".</p>").appendTo("#result");
     });
 });
